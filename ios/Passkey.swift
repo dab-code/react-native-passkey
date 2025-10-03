@@ -249,8 +249,7 @@ class Passkey: NSObject, RNPasskeyResultHandler {
     }
 
     // Create auth controller
-    let authorizationRequests = [platformKeyRequest, securityKeyRequest];
-    return ASAuthorizationController(authorizationRequests: authorizationRequests);
+    return ASAuthorizationController(authorizationRequests: [platformKeyRequest, securityKeyRequest]);
   }
 
   /**
