@@ -83,7 +83,7 @@ class Passkey: NSObject, RNPasskeyResultHandler {
       let securityKeyRequest: ASAuthorizationRequest = self.configureGetSecurityKeyRequest(challenge: challenge, request: requestJSON);
 
       // Get authorization controller
-      let authController: ASAuthorizationController = self.configureAuthController(platformKeyRequest: platformKeyRequest, securityKeyRequest: securityKeyRequest);
+      let authController: ASAuthorizationController = self.configureAuthController(forcePlatformKey: forcePlatformKey, forceSecurityKey: forceSecurityKey, platformKeyRequest: platformKeyRequest, securityKeyRequest: securityKeyRequest);
 
       let passkeyDelegate = PasskeyDelegate(completionHandler: self);
 
